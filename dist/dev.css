@@ -1,0 +1,174 @@
+/* Developer-portfolio additions: CSS-only project visuals, stats strip, stack grid */
+
+/* ---------- Shared mock window ---------- */
+.mock-window{position:absolute;background:#fffdf6;border-radius:10px;box-shadow:8px 10px 0 #0003;overflow:hidden;color:#1d2a22;font-size:.75rem;transition:transform .6s var(--ease)}
+.mock-bar{display:flex;gap:5px;align-items:center;padding:8px 10px;background:#ece5cc;border-bottom:1px solid #0001}
+.mock-bar i{width:8px;height:8px;border-radius:50%;background:#c9bf9c;display:block}
+.mock-bar i:first-child{background:#e08a7a}.mock-bar i:nth-child(2){background:#e3c36a}.mock-bar i:nth-child(3){background:#8dbd8a}
+.mock-bar b{margin-left:8px;font-weight:400;font-size:.7rem;opacity:.6;letter-spacing:.02em}
+.mock-body{padding:12px}
+.project-open:hover .mock-window{transform:translateY(-8px) rotate(-1deg)}
+.tech-label{position:absolute;left:22px;bottom:17px;font-size:.75rem;letter-spacing:.1em}
+
+/* ---------- VMS visual ---------- */
+.vms-visual{background:#e8b64a}
+.vms-brand{color:#2a1d07;font-family:Studio,Arial,sans-serif}
+.vms-visual .tech-label{color:#2a1d07}
+.vms-visual .mock-window{width:68%;right:6%;top:36%;display:grid;grid-template-columns:30% 1fr;grid-template-rows:auto 1fr}
+.vms-visual .mock-bar{grid-column:1/-1}
+.vms-side{background:#1e3b2f;color:#f6f1de;padding:10px;display:flex;flex-direction:column;gap:8px;font-size:.68rem}
+.vms-side span{padding:5px 6px;border-radius:5px;opacity:.75}.vms-side span:first-child{background:#ffffff22;opacity:1}
+.vms-main{padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start}
+.vms-main div{background:#f1ead2;border-radius:6px;padding:8px}
+.vms-main strong{display:block;font-size:1.05rem;letter-spacing:-.03em}
+.vms-main small{font-size:.65rem;opacity:.65}
+.vms-main .wide{grid-column:1/-1;display:flex;gap:4px;align-items:flex-end;height:46px}
+.vms-main .wide i{flex:1;background:#1e3b2f;border-radius:2px 2px 0 0;display:block}
+
+/* ---------- Websofy visual ---------- */
+.websofy-visual{background:#3a46c4}
+.websofy-brand{color:#e4f37c}
+.websofy-visual .tech-label{color:#e4f37c}
+.websofy-visual .mock-window{width:72%;right:5%;top:38%}
+.ws-hero{background:linear-gradient(135deg,#1e2680,#4a58e0);color:#fff;border-radius:6px;padding:14px 12px}
+.ws-hero strong{display:block;font-size:1.05rem;line-height:1.1;letter-spacing:-.03em}
+.ws-hero em{font-style:normal;color:#e4f37c}
+.ws-hero span{display:inline-block;margin-top:9px;background:#e4f37c;color:#1a1f6b;border-radius:12px;padding:3px 9px;font-size:.65rem;font-weight:700}
+.ws-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+.ws-row div{background:#eceaff;border-radius:5px;height:34px}
+.ws-seo{margin-top:8px;font-family:ui-monospace,Menlo,monospace;font-size:.62rem;background:#15183f;color:#b9c0ff;border-radius:5px;padding:7px 8px;line-height:1.5}
+.ws-seo b{color:#e4f37c;font-weight:400}
+
+/* ---------- Canteen (phone) visual ---------- */
+.canteen-visual{background:#f0b78e;position:relative;aspect-ratio:1.05;padding:28px 30px 0}
+.canteen-identity{font-size:2.4rem;font-weight:700;letter-spacing:-.06em;color:#4a2412;position:relative;z-index:1}
+.canteen-identity>span{display:block;font-size:.75rem;letter-spacing:.1em;margin-top:5px}
+.phone{width:56%;min-width:200px;background:#fffcf3;border:6px solid #2b2118;border-radius:26px;box-shadow:10px 10px 0 #4a241238;position:absolute;left:30%;top:104px;padding:16px 12px;transform:rotate(6deg);transition:transform .6s;color:#3a2316}
+.project-open:hover .phone{transform:translateY(-12px) rotate(2deg)}
+.phone h4{font-size:1.15rem;margin:0 0 12px;letter-spacing:-.04em;font-weight:700}
+.phone-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.phone-grid div{border-radius:10px;padding:10px 9px;font-size:.68rem;line-height:1.25}
+.phone-grid strong{display:block;font-size:1.25rem;letter-spacing:-.04em;margin-bottom:2px}
+.phone-grid div:nth-child(1){background:#f6d9bf}.phone-grid div:nth-child(2){background:#cfe3c4}
+.phone-grid div:nth-child(3){background:#f3e3a0}.phone-grid div:nth-child(4){background:#f2c1b8}
+.phone-nav{display:flex;justify-content:space-between;margin-top:14px;padding-top:9px;border-top:1px solid #ccc;font-size:.68rem}
+
+/* ---------- Xine IT Brains visual ---------- */
+.xine-visual{background:#0f2b4a}
+.xine-brand{color:#7fd6ff;font-family:Studio,Arial,sans-serif}
+.xine-visual .tech-label{color:#7fd6ff}
+.xine-visual .mock-window{width:66%;right:6%;top:40%}
+.xine-hero{background:linear-gradient(120deg,#12385f,#1c6a9a);border-radius:6px;padding:14px 12px;color:#fff}
+.xine-hero strong{display:block;font-size:.98rem;line-height:1.15;letter-spacing:-.03em}
+.xine-hero small{display:block;margin-top:6px;opacity:.75;font-size:.65rem}
+.xine-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.xine-chips span{background:#e3f3fb;color:#12385f;border-radius:10px;padding:3px 8px;font-size:.62rem}
+
+/* ---------- Mahila Vikas visual ---------- */
+.mahila-visual{background:#d9a3b8}
+.mahila-brand{color:#3b1226;font-family:Studio,Arial,sans-serif}
+.mahila-visual .tech-label{color:#3b1226}
+.mahila-visual .mock-window{width:64%;right:7%;top:42%}
+.mv-top{height:10px;background:linear-gradient(90deg,#f39a3d 33%,#fff 33% 66%,#2e8b57 66%);border-radius:2px}
+.mv-title{margin:9px 0 7px;font-weight:700;font-size:.9rem;letter-spacing:-.02em}
+.mv-lines i{display:block;height:6px;background:#e6ddc4;border-radius:3px;margin-bottom:6px}
+.mv-lines i:nth-child(2){width:84%}.mv-lines i:nth-child(3){width:62%}
+.mv-form{display:flex;gap:6px;margin-top:6px}.mv-form span{flex:1;border:1px solid #cfc6a8;border-radius:4px;height:22px}
+.mv-form b{background:#3b1226;color:#fff;border-radius:4px;padding:5px 9px;font-size:.62rem;font-weight:400;display:flex;align-items:center}
+
+/* ---------- IT Surveillance visual ---------- */
+.surv-visual{background:#1b1f1d}
+.surv-brand{color:#9df29a;font-family:Studio,Arial,sans-serif}
+.surv-visual .tech-label{color:#9df29a}
+.surv-visual .mock-window{width:66%;right:6%;top:40%;background:#0e1110;color:#9df29a}
+.surv-visual .mock-bar{background:#1d231f}
+.surv-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.surv-grid div{aspect-ratio:1.5;background:#17201a;border:1px solid #2f4b36;border-radius:4px;position:relative;overflow:hidden}
+.surv-grid div:after{content:'REC';position:absolute;top:4px;left:5px;font-size:.55rem;color:#ff7b6b;letter-spacing:.08em}
+.surv-grid div:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,#9df29a10 0 2px,transparent 2px 4px)}
+.surv-log{margin-top:7px;font-family:ui-monospace,Menlo,monospace;font-size:.6rem;opacity:.8;line-height:1.5}
+
+/* ---------- OSM / .NET visual ---------- */
+.osm-visual{background:#9ccfd0}
+.osm-brand{color:#0d3a42;font-family:Studio,Arial,sans-serif}
+.osm-visual .tech-label{color:#0d3a42}
+.osm-visual .mock-window{width:66%;right:6%;top:40%}
+.osm-map{height:96px;border-radius:5px;position:relative;background:#dfeee4;overflow:hidden}
+.osm-map:before{content:'';position:absolute;inset:0;background:linear-gradient(30deg,transparent 46%,#fff 46% 49%,transparent 49%),linear-gradient(120deg,transparent 58%,#f5d98a 58% 62%,transparent 62%),linear-gradient(80deg,transparent 30%,#b8d8e6 30% 40%,transparent 40%)}
+.osm-pin{position:absolute;width:14px;height:14px;background:#e2574c;border-radius:50% 50% 50% 0;transform:rotate(-45deg);left:48%;top:38%;box-shadow:0 0 0 4px #e2574c33}
+.osm-row{display:flex;gap:6px;margin-top:7px}.osm-row span{flex:1;background:#e5eef0;border-radius:4px;padding:5px 6px;font-size:.62rem}
+
+/* ---------- Home: stats strip ---------- */
+.stats{max-width:1200px;margin:0 auto;padding-top:20px;padding-bottom:30px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{background:var(--cream);color:var(--ink);padding:26px 22px 22px;box-shadow:8px 12px 16px #061f2850;position:relative}
+.stat:nth-child(1){transform:rotate(-2deg)}.stat:nth-child(2){transform:rotate(1.5deg);background:var(--yellow)}
+.stat:nth-child(3){transform:rotate(-1deg);background:var(--pink)}.stat:nth-child(4){transform:rotate(2deg)}
+.stat strong{display:block;font-family:Bookman,Georgia,serif;font-style:italic;font-weight:700;font-size:3.6rem;letter-spacing:-.07em;line-height:1}
+.stat span{display:block;margin-top:12px;font-size:.75rem;letter-spacing:.09em;font-weight:700}
+.stat p{margin-top:6px;font-size:.85rem;line-height:1.35;opacity:.75}
+
+/* ---------- Stack grid (home + about) ---------- */
+.stack-section{padding-top:30px;padding-bottom:70px}
+.stack-grid{max-width:1300px;margin:60px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stack-card{border:1px solid #eee1bb55;padding:24px 22px;background:#10392c55}
+.stack-card h3{font-size:1.2rem;font-weight:400;letter-spacing:-.03em;margin-bottom:6px}
+.stack-card small{display:block;font-size:.72rem;letter-spacing:.09em;opacity:.65;margin-bottom:16px}
+.stack-card ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:7px}
+.stack-card li{border:1px solid #f6f1de55;border-radius:16px;padding:6px 11px;font-size:.82rem}
+
+/* ---------- Live link + case study helpers ---------- */
+.live-link{display:inline-flex;align-items:center;gap:14px;margin-top:28px}
+.case-cover .mock-window{zoom:1.6}
+.case-cover .project-visual{aspect-ratio:1.9}
+.case-cover .project-brand{font-size:clamp(2.5rem,6vw,6rem)}
+.case-cover .tech-label{font-size:.8rem}
+.case-cover .canteen-visual{min-height:540px}
+.case-cover .canteen-identity{font-size:5rem;padding:35px}
+.case-cover .phone{width:320px;left:57%;top:80px;padding:28px 20px}
+.case-cover .phone h4{font-size:1.7rem}
+.case-cover .phone-grid div{font-size:.85rem;padding:14px 12px}
+.case-cover .phone-grid strong{font-size:1.7rem}
+.flow-steps{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:22px 0 4px}
+.flow-steps span{border:1px solid #f6f1de66;border-radius:20px;padding:8px 14px;font-size:.88rem}
+.flow-steps i{font-style:normal;color:var(--pink)}
+.tech-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.tech-chips span{background:var(--cream);color:var(--ink);border-radius:18px;padding:8px 14px;font-size:.85rem}
+.case-cover .vms-visual .mock-window,.case-cover .websofy-visual .mock-window,.case-cover .xine-visual .mock-window,.case-cover .mahila-visual .mock-window,.case-cover .surv-visual .mock-window,.case-cover .osm-visual .mock-window{top:30%}
+
+@media(max-width:1000px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stack-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .stats-grid{gap:18px;padding:0 8px}
+  .stat strong{font-size:2.8rem}
+  .stack-grid{grid-template-columns:1fr;margin-top:40px}
+  .project-visual .mock-window{width:78%!important;right:5%!important;top:44%!important}
+  .project-brand{font-size:2.8rem}
+  .case-cover .mock-window{transform:none}
+  .case-cover .project-visual{aspect-ratio:1.04}
+  .case-cover .canteen-visual{min-height:380px}
+  .case-cover .canteen-identity{padding:0;font-size:3rem}
+  .case-cover .phone{left:20%;top:110px;width:230px;padding:18px 14px}
+  .case-cover .phone h4{font-size:1.2rem}
+  .case-cover .phone-grid div{font-size:.7rem;padding:9px}
+  .case-cover .phone-grid strong{font-size:1.2rem}
+}
+@media(max-width:480px){
+  .stats-grid{grid-template-columns:1fr}
+}
+
+/* archive card tilt (tilt script needs --card-rotation) */
+.archive-grid .project-card{--card-rotation:-2deg}
+.archive-grid .project-card:nth-child(even){--card-rotation:2deg}
+.archive-grid .project-card:nth-child(3n){--card-rotation:-1deg}
+
+/* fit fixes: keep mock windows clear of the tech label */
+.websofy-visual .mock-window{top:30%}
+.websofy-visual .ws-row{display:none}
+.surv-visual .mock-window{top:34%}
+.surv-visual .surv-grid div{aspect-ratio:2.2}
+.case-cover .websofy-visual .mock-window{top:26%}
+.case-cover .project-open:hover .mock-window{transform:none}
+@media(max-width:760px){.case-cover .mock-window{zoom:1}}
